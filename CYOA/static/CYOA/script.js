@@ -76,6 +76,8 @@ let firstOption = document.getElementById("first");
 firstOption.textContent = "test";
 //gets the h1 tag
 let secondOption = document.getElementById("second");
+let textsrc = document.getElementById("text");
+
 
 const test = new BinaryTree();
 
@@ -100,6 +102,8 @@ test.root.right.right.right = new Node("rightrightright","t","dddddddddddddd");
 
 firstOption.textContent = test.currentNode.left.decision;
 secondOption.textContent = test.currentNode.right.decision;
+textsrc.textContent = test.currentNode.text;
+
 
 
 console.log(test.currentNode.text);
