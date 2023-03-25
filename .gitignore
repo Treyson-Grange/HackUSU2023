@@ -1,4 +1,4 @@
-.sav
+*.sav
 db.sqlite3
 venv
 .DS_Store
