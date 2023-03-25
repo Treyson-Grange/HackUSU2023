@@ -48,7 +48,7 @@ class BinaryTree {
             firstOption.textContent = this.currentNode.left.decision;
             secondOption.textContent = this.currentNode.right.decision;
             imagesrc.src = this.currentNode.imageURL;
-            imagesrc.src = "https://raw.githubusercontent.com/Treyson-Grange/HackUSU2023/master/CYOA/static/CYOA/download2.jpg?token=GHSAT0AAAAAACAEVS5KBTJUWOVH7QUQUN4WZA6ORGQ";
+            imagesrc.src = "/static/CYOA/download2.jpg";
             imagesrc.alt= "fuck";
             
         }
