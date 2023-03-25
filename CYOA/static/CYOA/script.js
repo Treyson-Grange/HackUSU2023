@@ -42,9 +42,18 @@ class BinaryTree {
     }
     update() {
         let firstOption = document.getElementById("first");
-        firstOption.textContent = this.currentNode.left.decision;
         let secondOption = document.getElementById("second");
-        secondOption.textContent = this.currentNode.right.decision;
+        if(this.currentNode.left != null || this.currentNode.right != null) {
+            firstOption.textContent = this.currentNode.left.decision;
+            secondOption.textContent = this.currentNode.right.decision;
+        }
+        else {
+            firstOption.textContent = "THE";
+            secondOption.textContent = "END"
+        }
+        
+        let textBox = document. getElementById("text");
+        textBox.textContent = this.currentNode.text;
     }
     goLeft() {
         this.currentNode = this.currentNode.left;
