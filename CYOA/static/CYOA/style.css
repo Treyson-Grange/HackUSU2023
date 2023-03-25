@@ -1,9 +1,17 @@
 .image {
-    border: 10px;
     background-color: black;
 }
 .common {
     text-align: center;
     margin: 10px;
     padding: 10px;
+    border: 10px;
+}
+.text {
+    background-color: black;
+    color: white;
+}
+.dec {
+    background-color: black;
+    color: white;
 }
