@@ -12,34 +12,6 @@ class BinaryTree {
         this.root = null;
         this.currentNode = this.root
     }
-    insert(data, imageURL) {
-        var newNode = new Node(data, imageURL);
-        if(this.root === null) {
-            this.root = newNode;
-            console.log("asdf")
-        }
-        else {
-            this.insertNode(this.root, newNode);
-        }
-    }
-    insertNode(node, newNode) {
-        if(newNode.data < node.data) {
-            if(node.left === null) {
-                node.left = newNode;
-            }
-            else {
-                this.insertNode(node.left, newNode);
-            }
-        }
-        else {
-            if(node.right === null) {
-                node.right = newNode;
-            }
-            else {
-                this.insertNode(node.right, newNode);
-            }
-        }
-    }
     goLeft() {
         console.log("clicked left");
         this.currentNode = this.currentNode.left;
@@ -54,7 +26,12 @@ class BinaryTree {
         let imagesrc = document.getElementById("imagesrc");
         imagesrc.src = this.currentNode.imageURL;
         imagesrc.alt= "image";
-    
+        
+        let story = document.getElementById('story');
+        let newText = document.createElement('p');
+        newText.textContent = this.currentNode.text;
+        story.appendChild(newText);
+
         let firstOption = document.getElementById('first')
         if (this.currentNode.left != null) {
             firstOption.textContent = this.currentNode.left.decision;
@@ -71,10 +48,10 @@ class BinaryTree {
             secondOption.remove()
         }
         
-        let story = document.getElementById('story');
-        let newText = document.createElement('p');
-        newText.textContent = this.currentNode.text;
-        story.appendChild(newText);
+        let decisions = document.getElementById('decisions')
+        if (decisions.children.length == 0) {
+            decisions.remove()
+        }
     }
     
 }
