@@ -48,7 +48,7 @@ class BinaryTree {
             firstOption.textContent = this.currentNode.left.decision;
             secondOption.textContent = this.currentNode.right.decision;
             imagesrc.src = this.currentNode.imageURL;
-            imagesrc.alt= "fuck";
+            imagesrc.alt= "image";
             
         }
         else {
