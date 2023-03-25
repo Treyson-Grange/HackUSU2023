@@ -1,6 +1,6 @@
 console.log("hello")
 console.log("")
-
+console.log("")
 
 class Node {
     constructor(text, imageURL) {
