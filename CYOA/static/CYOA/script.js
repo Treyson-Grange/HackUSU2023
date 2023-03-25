@@ -48,7 +48,6 @@ class BinaryTree {
             firstOption.textContent = this.currentNode.left.decision;
             secondOption.textContent = this.currentNode.right.decision;
             imagesrc.src = this.currentNode.imageURL;
-            imagesrc.src = "/static/CYOA/download2.jpg";
             imagesrc.alt= "fuck";
             
         }
@@ -83,22 +82,22 @@ const test = new BinaryTree();
 
 
 
-test.root = new Node("root","t","d");
+test.root = new Node("root", "/static/CYOA/download.jpg", "d");
 test.currentNode = test.root;
-test.root.left = new Node("left","{% static 'CYOA/download2.jpg' %}","d");
-test.root.right = new Node("right","t","dd");
-test.root.left.left = new Node("leftleft","t","ddd");
-test.root.left.right = new Node("leftright","t","dddd");
-test.root.right.left = new Node("rightleft","t","ddddd");
-test.root.right.right = new Node("rightright","t","dddddd");
-test.root.left.left.left = new Node("leftleftleft","t","ddddddd");
-test.root.left.left.right = new Node("leftleftright","t","dddddddd");
-test.root.left.right.left = new Node("leftrightleft","t","ddddddddd");
-test.root.left.right.right = new Node("leftrightright","t","dddddddddd");
-test.root.right.left.left = new Node("rightleftleft","t","ddddddddddd");
-test.root.right.left.right = new Node("rightleftright","t","ddddddddddddd");
-test.root.right.right.left = new Node("rightrightleft","t","dddddddddddddd");
-test.root.right.right.right = new Node("rightrightright","t","dddddddddddddd");
+test.root.left = new Node("left", "/static/CYOA/download2.jpg", "d");
+test.root.right = new Node("right", "/static/CYOA/download2.jpg", "dd");
+test.root.left.left = new Node("leftleft", "/static/CYOA/download2.jpg" ,"ddd");
+test.root.left.right = new Node("leftright", "/static/CYOA/download2.jpg", "dddd");
+test.root.right.left = new Node("rightleft", "/static/CYOA/download2.jpg", "ddddd");
+test.root.right.right = new Node("rightright", "/static/CYOA/download2.jpg", "dddddd");
+test.root.left.left.left = new Node("leftleftleft", "/static/CYOA/download2.jpg", "ddddddd");
+test.root.left.left.right = new Node("leftleftright", "/static/CYOA/download2.jpg", "dddddddd");
+test.root.left.right.left = new Node("leftrightleft", "/static/CYOA/download2.jpg", "ddddddddd");
+test.root.left.right.right = new Node("leftrightright", "/static/CYOA/download2.jpg", "dddddddddd");
+test.root.right.left.left = new Node("rightleftleft", "/static/CYOA/download2.jpg", "ddddddddddd");
+test.root.right.left.right = new Node("rightleftright", "/static/CYOA/download2.jpg", "ddddddddddddd");
+test.root.right.right.left = new Node("rightrightleft", "/static/CYOA/download2.jpg", "dddddddddddddd");
+test.root.right.right.right = new Node("rightrightright", "/static/CYOA/download2.jpg", "dddddddddddddd");
 
 firstOption.textContent = test.currentNode.left.decision;
 secondOption.textContent = test.currentNode.right.decision;
