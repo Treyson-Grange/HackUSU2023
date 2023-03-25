@@ -43,9 +43,14 @@ class BinaryTree {
     update() {
         let firstOption = document.getElementById("first");
         let secondOption = document.getElementById("second");
+        let imagesrc = document.getElementById("imagesrc")
         if(this.currentNode.left != null || this.currentNode.right != null) {
             firstOption.textContent = this.currentNode.left.decision;
             secondOption.textContent = this.currentNode.right.decision;
+            imagesrc.src = this.currentNode.imageURL;
+            imagesrc.src = "";
+            imagesrc.alt= "fuck";
+            
         }
         else {
             firstOption.textContent = "THE";
@@ -78,7 +83,7 @@ const test = new BinaryTree();
 
 test.root = new Node("root","t","d");
 test.currentNode = test.root;
-test.root.left = new Node("left","t","d");
+test.root.left = new Node("left","{% static 'CYOA/download2.jpg' %}","d");
 test.root.right = new Node("right","t","dd");
 test.root.left.left = new Node("leftleft","t","ddd");
 test.root.left.right = new Node("leftright","t","dddd");
