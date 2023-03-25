@@ -40,32 +40,41 @@ class BinaryTree {
             }
         }
     }
-    update() {
-        let firstOption = document.getElementById("first");
-        let secondOption = document.getElementById("second");
-        let imagesrc = document.getElementById("imagesrc")
-        if(this.currentNode.left != null || this.currentNode.right != null) {
-            firstOption.textContent = this.currentNode.left.decision;
-            secondOption.textContent = this.currentNode.right.decision;
-            imagesrc.src = this.currentNode.imageURL;
-            imagesrc.alt= "image";
-            
-        }
-        else {
-            firstOption.textContent = "THE";
-            secondOption.textContent = "END"
-        }
-        
-        let textBox = document. getElementById("text");
-        textBox.textContent = this.currentNode.text;
-    }
     goLeft() {
+        console.log("clicked left");
         this.currentNode = this.currentNode.left;
         this.update();
     }
     goRight() {
+        console.log("clicked right");
         this.currentNode = this.currentNode.right;
         this.update();
+    }
+    update() {
+        let imagesrc = document.getElementById("imagesrc");
+        imagesrc.src = this.currentNode.imageURL;
+        imagesrc.alt= "image";
+    
+        let firstOption = document.getElementById('first')
+        if (this.currentNode.left != null) {
+            firstOption.textContent = this.currentNode.left.decision;
+        }
+        else {
+            firstOption.remove()
+        }
+
+        let secondOption = document.getElementById('second')
+        if (this.currentNode.right != null) {
+            secondOption.textContent = this.currentNode.right.decision;
+        }
+        else {
+            secondOption.remove()
+        }
+        
+        let story = document.getElementById('story');
+        let newText = document.createElement('p');
+        newText.textContent = this.currentNode.text;
+        story.appendChild(newText);
     }
     
 }
@@ -111,12 +120,11 @@ console.log(test.currentNode.text);
 
 
 firstOption.onclick = function() {
-    console.log("clicked");
     //Call a function that goes to the left of the current node
     test.goLeft();
 }
 secondOption.onclick = function() {
-    console.log("clicked");
+    
     //Call a function that goes to the right of the current node
     test.goRight();
 }
