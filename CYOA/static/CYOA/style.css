@@ -1,0 +1,9 @@
+.image {
+    border: 10px;
+    background-color: black;
+}
+.common {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}

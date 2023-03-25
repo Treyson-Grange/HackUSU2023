@@ -5,9 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CYOA/style.css' %}">
     <title>Document</title>
 </head>
 <body>
+    <div class="image common">
+        <img src="{% static 'CYOA/download.jpg' %}" alt="tree">
+    </div>
+    <div class="text common">
+        <p id="text"></p>
+    </div>
+    <div class="decisions common">
+        <h1 id="first">Sub to change</h1>
+        <h1 id="second">Sub to change</h1>
+    </div>
+
+
     <script src="{% static 'CYOA/script.js' %}"></script>
 </body>
 </html>
