@@ -55,7 +55,8 @@ class BinaryTree {
     }
     
 }
-
+var audio = new Audio('/static/CYOA/Extraterra.mp3');
+audio.play();
 
 let firstOption = document.getElementById("first");
 firstOption.textContent = "test";
