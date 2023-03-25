@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.shortcuts import render, get_object_or_404
-import lorem
 import math
 from time import strftime
 from django.http import HttpResponseRedirect
