@@ -1,0 +1,43 @@
+.image {
+    background-color: #333333;
+    border-style: solid;
+    border-color: #000;
+}
+.common {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 10px;
+    box-shadow: 10px 10px 10px #000;
+    border-radius: 10pt;
+    border-style: solid;
+    border-color: #000;
+    border-width: 5pt;
+    color: white;
+}
+.text {
+    background-color: #666666;
+    font-size: 15pt;
+}
+.dec {
+    background-color: #cccccc;
+    color: white;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 10pt;
+}
+.decisions {
+    background-color: #999999;
+    color: white;
+    border-radius: 10pt;
+}
+img {
+    border-radius: 10pt;
+    border-style: solid;
+    border-color: #000;
+    max-width: 25%;
+    height: auto;
+}
+.title {
+    background-color: #212121;
+}
